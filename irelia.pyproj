@@ -1,0 +1,103 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>8b48f8b8-a8ed-4777-8afa-e4e98f61f1e4</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>irelia.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>irelia</Name>
+    <RootNamespace>irelia</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="action_api.py" />
+    <Compile Include="compress_q_file.py" />
+    <Compile Include="convert_gib_files.py" />
+    <Compile Include="env\env.py" />
+    <Compile Include="env\korean_chess.py" />
+    <Compile Include="env\korean_chess_piece\cannon.py" />
+    <Compile Include="env\korean_chess_piece\car.py" />
+    <Compile Include="env\korean_chess_piece\guardian.py" />
+    <Compile Include="env\korean_chess_piece\horse.py" />
+    <Compile Include="env\korean_chess_piece\king.py" />
+    <Compile Include="env\korean_chess_piece\piece_factory.py" />
+    <Compile Include="env\korean_chess_piece\sang.py" />
+    <Compile Include="env\korean_chess_piece\soldier.py" />
+    <Compile Include="env\korean_chess_piece\__init__.py" />
+    <Compile Include="env\korean_chess_util.py" />
+    <Compile Include="env\__init__.py" />
+    <Compile Include="game\game.py" />
+    <Compile Include="game\__init__.py" />
+    <Compile Include="irelia.py" />
+    <Compile Include="migrate_q_to_sqlite.py" />
+    <Compile Include="migrate_statekey_to_es.py" />
+    <Compile Include="play_ai_vs_ai_with_es.py" />
+    <Compile Include="saver\saver.py" />
+    <Compile Include="saver\__init__.py" />
+    <Compile Include="test.py" />
+    <Compile Include="train_q_learning.py" />
+    <Compile Include="train_q_learning_es.py" />
+    <Compile Include="train_q_learning_with_data.py" />
+    <Compile Include="train_q_learning_with_data_test.py" />
+    <Compile Include="util\build_q_table_graph_json.py" />
+    <Compile Include="util\__init__.py" />
+    <Compile Include="web\api\action.py" />
+    <Compile Include="web\api\__init__.py" />
+    <Compile Include="web\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="env\" />
+    <Folder Include="env\korean_chess_piece\" />
+    <Folder Include="game\" />
+    <Folder Include="saver\" />
+    <Folder Include="schema\" />
+    <Folder Include="templates\" />
+    <Folder Include="util\" />
+    <Folder Include="web\" />
+    <Folder Include="web\api\" />
+    <Folder Include="web\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="schema\q_sqlite.db" />
+    <Content Include="templates\play.html" />
+    <Content Include="web\img\Green_Cha.png" />
+    <Content Include="web\img\Green_King.png" />
+    <Content Include="web\img\Green_Ma.png" />
+    <Content Include="web\img\Green_Po.png" />
+    <Content Include="web\img\Green_Sa.png" />
+    <Content Include="web\img\Green_Sang.png" />
+    <Content Include="web\img\Green_Zol.png" />
+    <Content Include="web\img\Jang_Gi_Pan.jpg" />
+    <Content Include="web\img\Red_Byung.png" />
+    <Content Include="web\img\Red_Cha.png" />
+    <Content Include="web\img\Red_King.png" />
+    <Content Include="web\img\Red_Ma.png" />
+    <Content Include="web\img\Red_Po.png" />
+    <Content Include="web\img\Red_Sa.png" />
+    <Content Include="web\img\Red_Sang.png" />
+    <Content Include="web\miserables.json" />
+    <Content Include="web\q_table_graph.html" />
+    <Content Include="web\q_table_graph.json" />
+    <Content Include="web\review.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
