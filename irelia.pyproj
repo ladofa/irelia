@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8b48f8b8-a8ed-4777-8afa-e4e98f61f1e4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>irelia.py</StartupFile>
+    <StartupFile>train_q_learning.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,55 +22,110 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="action_api.py" />
+    <Compile Include="agent\agent.py" />
+    <Compile Include="agent\korean_chess\random_agent.py" />
+    <Compile Include="agent\korean_chess\recorded_agent.py" />
+    <Compile Include="agent\korean_chess\reward_based_agent.py" />
+    <Compile Include="agent\__init__.py" />
     <Compile Include="compress_q_file.py" />
     <Compile Include="convert_gib_files.py" />
+    <Compile Include="core\agent.py" />
+    <Compile Include="core\constant.py" />
+    <Compile Include="core\env.py" />
+    <Compile Include="core\game.py" />
+    <Compile Include="core\piece\cannon.py" />
+    <Compile Include="core\piece\car.py" />
+    <Compile Include="core\piece\common.py" />
+    <Compile Include="core\piece\guardian.py" />
+    <Compile Include="core\piece\horse.py" />
+    <Compile Include="core\piece\king.py" />
+    <Compile Include="core\piece\piece_factory.py" />
+    <Compile Include="core\piece\sang.py" />
+    <Compile Include="core\piece\soldier.py" />
+    <Compile Include="core\piece\__init__.py" />
+    <Compile Include="core\__init__.py" />
     <Compile Include="env\env.py" />
-    <Compile Include="env\korean_chess.py" />
-    <Compile Include="env\korean_chess_piece\cannon.py" />
-    <Compile Include="env\korean_chess_piece\car.py" />
-    <Compile Include="env\korean_chess_piece\guardian.py" />
-    <Compile Include="env\korean_chess_piece\horse.py" />
-    <Compile Include="env\korean_chess_piece\king.py" />
-    <Compile Include="env\korean_chess_piece\piece_factory.py" />
-    <Compile Include="env\korean_chess_piece\sang.py" />
-    <Compile Include="env\korean_chess_piece\soldier.py" />
-    <Compile Include="env\korean_chess_piece\__init__.py" />
-    <Compile Include="env\korean_chess_util.py" />
+    <Compile Include="env\korean_chess\cannon.py" />
+    <Compile Include="env\korean_chess\car.py" />
+    <Compile Include="env\korean_chess\common.py" />
+    <Compile Include="env\korean_chess\core.py" />
+    <Compile Include="env\korean_chess\guardian.py" />
+    <Compile Include="env\korean_chess\horse.py" />
+    <Compile Include="env\korean_chess\king.py" />
+    <Compile Include="env\korean_chess\piece_factory.py" />
+    <Compile Include="env\korean_chess\sang.py" />
+    <Compile Include="env\korean_chess\soldier.py" />
+    <Compile Include="env\korean_chess\__init__.py" />
     <Compile Include="env\__init__.py" />
     <Compile Include="game\game.py" />
     <Compile Include="game\__init__.py" />
-    <Compile Include="irelia.py" />
     <Compile Include="migrate_q_to_sqlite.py" />
     <Compile Include="migrate_statekey_to_es.py" />
     <Compile Include="play_ai_vs_ai_with_es.py" />
-    <Compile Include="saver\saver.py" />
-    <Compile Include="saver\__init__.py" />
+    <Compile Include="policy_network\sl_policy_network.py" />
+    <Compile Include="policy_network\__init__.py" />
     <Compile Include="test.py" />
     <Compile Include="train_q_learning.py" />
     <Compile Include="train_q_learning_es.py" />
     <Compile Include="train_q_learning_with_data.py" />
     <Compile Include="train_q_learning_with_data_test.py" />
     <Compile Include="util\build_q_table_graph_json.py" />
+    <Compile Include="util\constant.py" />
+    <Compile Include="util\gibo_csv_reader.py" />
+    <Compile Include="util\neural_network.py" />
+    <Compile Include="util\saver.py" />
+    <Compile Include="util\sl_policy_network.py" />
+    <Compile Include="util\util.py" />
     <Compile Include="util\__init__.py" />
-    <Compile Include="web\api\action.py" />
     <Compile Include="web\api\__init__.py" />
     <Compile Include="web\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="agent\" />
+    <Folder Include="agent\korean_chess\" />
+    <Folder Include="agent\korean_chess\__pycache__\" />
+    <Folder Include="agent\__pycache__\" />
+    <Folder Include="core\" />
+    <Folder Include="core\piece\" />
     <Folder Include="env\" />
-    <Folder Include="env\korean_chess_piece\" />
+    <Folder Include="env\korean_chess\" />
+    <Folder Include="env\korean_chess\__pycache__\" />
+    <Folder Include="env\__pycache__\" />
     <Folder Include="game\" />
-    <Folder Include="saver\" />
+    <Folder Include="game\__pycache__\" />
+    <Folder Include="policy_network\" />
     <Folder Include="schema\" />
     <Folder Include="templates\" />
     <Folder Include="util\" />
+    <Folder Include="util\__pycache__\" />
     <Folder Include="web\" />
     <Folder Include="web\api\" />
     <Folder Include="web\img\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="agent\korean_chess\__pycache__\random_agent.cpython-36.pyc" />
+    <Content Include="agent\__pycache__\agent.cpython-36.pyc" />
+    <Content Include="agent\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\cannon.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\car.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\common.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\core.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\guardian.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\horse.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\king.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\piece_factory.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\sang.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\soldier.cpython-36.pyc" />
+    <Content Include="env\korean_chess\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="env\__pycache__\env.cpython-36.pyc" />
+    <Content Include="env\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="game\__pycache__\game.cpython-36.pyc" />
+    <Content Include="game\__pycache__\__init__.cpython-36.pyc" />
     <Content Include="schema\q_sqlite.db" />
     <Content Include="templates\play.html" />
+    <Content Include="util\__pycache__\constant.cpython-36.pyc" />
+    <Content Include="util\__pycache__\util.cpython-36.pyc" />
+    <Content Include="util\__pycache__\__init__.cpython-36.pyc" />
     <Content Include="web\img\Green_Cha.png" />
     <Content Include="web\img\Green_King.png" />
     <Content Include="web\img\Green_Ma.png" />
